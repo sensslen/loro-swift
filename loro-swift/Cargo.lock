@@ -706,6 +706,7 @@ name = "loro"
 version = "1.5.8"
 dependencies = [
  "loro-ffi",
+ "uniffi",
 ]
 
 [[package]]

@@ -10,6 +10,9 @@ name = "loro"
 [dependencies]
 loro-ffi = { git = "https://github.com/sensslen/loro-ffi.git", rev = "fdb33599e251303e6c9d22ba157113e5ea5b741d" }
 
+[build-dependencies]
+uniffi = { version = "0.28.3", features = ["build"] }
+
 [[bin]]
 # This can be whatever name makes sense for your project, but the rest of this tutorial assumes uniffi-bindgen.
 name = "uniffi-bindgen"
