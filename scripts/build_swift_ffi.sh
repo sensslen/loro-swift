@@ -47,6 +47,7 @@ mkdir -p "${SWIFT_FOLDER}"
 echo "▸ Generate Swift Scaffolding Code"
 cargo run --manifest-path "$RUST_FOLDER/Cargo.toml"  \
     --features=cli \
+    -- \
     --library \
     "$RUST_FOLDER/$LIB_NAME" \
     --no-format \
