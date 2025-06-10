@@ -7,7 +7,7 @@
 set -euxo pipefail
 THIS_SCRIPT_DIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 LIB_NAME="libloro_ffi.a"
-RUST_FOLDER="$THIS_SCRIPT_DIR/../loro-ffi"
+RUST_FOLDER="$THIS_SCRIPT_DIR/../loro-swift"
 FRAMEWORK_NAME="loroFFI"
 
 SWIFT_FOLDER="$THIS_SCRIPT_DIR/../gen-swift"
@@ -48,7 +48,7 @@ echo "▸ Generate Swift Scaffolding Code"
 cargo run --manifest-path "$RUST_FOLDER/Cargo.toml"  \
     --features=cli \
     --bin uniffi-bindgen generate \
-    "$RUST_FOLDER/src/loro.udl" \
+    "$RUST_FOLDER/$LIB_NAME" \
     --no-format \
     --language swift \
     --out-dir "${SWIFT_FOLDER}"

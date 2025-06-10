@@ -29,7 +29,7 @@ echo "▸ Generate Swift Scaffolding Code"
 cargo run -r --manifest-path "$RUST_FOLDER/Cargo.toml"  \
     --features=cli \
     --bin uniffi-bindgen generate \
-    "$RUST_FOLDER/src/loro.udl" \
+    "$RUST_FOLDER/$LIB_NAME" \
     --language swift \
     --out-dir "${SWIFT_FOLDER}" \
 

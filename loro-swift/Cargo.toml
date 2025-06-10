@@ -1,0 +1,19 @@
+[package]
+name = "loro"
+version = "1.5.8"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+name = "loro"
+
+[dependencies]
+loro-ffi = { git = "https://github.com/sensslen/loro-ffi.git", rev = "fdb33599e251303e6c9d22ba157113e5ea5b741d" }
+uniffi = "0.28.3"
+
+[build-dependencies]
+uniffi = { version = "0.28.3", features = ["build"] }
+
+[bindings.swift]
+module_name = "loro"
+experimental_sendable_value_types = true
