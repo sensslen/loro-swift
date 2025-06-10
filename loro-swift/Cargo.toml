@@ -14,6 +14,10 @@ uniffi = "0.28.3"
 [build-dependencies]
 uniffi = { version = "0.28.3", features = ["build"] }
 
+[features]
+default = []
+cli = ["loro-ffi/cli"]
+
 [bindings.swift]
 module_name = "loro"
 experimental_sendable_value_types = true
