@@ -6,7 +6,7 @@
 
 set -euxo pipefail
 THIS_SCRIPT_DIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
-LIB_NAME="libloro_ffi.a"
+LIB_NAME="libloro.a"
 RUST_FOLDER="$THIS_SCRIPT_DIR/../loro-swift"
 FRAMEWORK_NAME="loroFFI"
 
