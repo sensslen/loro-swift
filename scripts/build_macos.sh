@@ -28,7 +28,8 @@ mkdir -p "${SWIFT_FOLDER}"
 echo "▸ Generate Swift Scaffolding Code"
 cargo run -r --manifest-path "$RUST_FOLDER/Cargo.toml"  \
     --features=cli \
-    -- \
+    --bin uniffi-bindgen 
+    generate \
     --library \
     "$RUST_FOLDER/$LIB_NAME" \
     --language swift \
