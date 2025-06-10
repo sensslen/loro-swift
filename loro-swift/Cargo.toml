@@ -19,7 +19,6 @@ name = "uniffi-bindgen"
 path = "src/uniffi-bindgen.rs"
 
 [features]
-default = []
 cli = ["loro-ffi/cli"]
 
 [bindings.swift]
